@@ -1,0 +1,159 @@
+@use '../../styles/vars';
+
+
+.store-container{
+    display: flex;
+    max-width: 850px;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:1.5rem auto;
+}
+
+.storeCard{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid vars.$tertiary-color;
+    box-shadow: vars.$box-shadow;
+
+    &__name{
+        margin-top: 0.5rem;
+        font-size: 1rem;
+    }
+
+    &__price{
+        font-size: 1rem;
+    }
+
+    &__img{
+        width: 100px;
+        height: 100px;
+    }
+
+    &__modale{
+        position: absolute;
+        opacity: 0;
+        right: 25px;
+        bottom: 45px;
+        font-size: 1.5rem;
+        color: #f02759;
+        font-weight: bold;
+
+    }
+
+}
+
+
+.modaleAnim{
+    bottom: 45px;
+    bottom: 150px;
+    transform: rotate(360deg);
+    transition: all .5s ease-in-out;
+    animation: modaledisparition 6s;
+    
+    
+}
+
+.productsPage__title{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+
+@keyframes modaledisparition {
+  
+    0%{
+        opacity: 1;
+    }
+
+
+    100%{
+        opacity: 0;
+    }
+  
+}
+
+@media only screen and (max-height: 850px) {
+    .storeCard{
+        gap: 0.15rem;
+    }
+
+    .store-container{
+        margin: 0.5rem auto;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    .storeCard{
+        gap: 0.05rem;
+    }
+
+    .productsPage__title{
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .storeCard>.basic-button{
+        font-size: 0.7rem;
+        gap: 0.5rem;
+    }
+
+    .storeCard>.basic-button>img{
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+  .storeCard{
+
+    &__name{
+        font-size: 0.8rem;
+    }
+
+    &__price{
+        font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .storeCard{
+        width: 30%;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .storeCard{
+        width: 40%;
+    }
+
+    .storeCard:nth-last-child(-n+2){
+        margin-bottom: 5rem;
+    }
+
+    .store-container{
+        margin: 0;
+    }
+
+  }
+  
+

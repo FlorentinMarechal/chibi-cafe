@@ -1,0 +1,50 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-top: 2rem;
+
+    &__team:hover {
+        color: white;
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        gap: 3rem;
+        &__facebook{
+            width: 30px;
+        }
+
+        &__instagram{
+            width: 30px;
+        }
+
+        &-facebook {
+            width: 100%;
+        }
+    
+        &-instagram {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+.footer__image{
+    gap: 1rem;
+    width: 100px;
+}
+}    
+
+
+@media only screen and (max-width: 375px) {
+    .footer{
+        font-size: 0.7rem;
+    }
+}

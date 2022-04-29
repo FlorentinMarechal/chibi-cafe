@@ -1,0 +1,70 @@
+.solid{
+    display: flex;
+    max-width: 630px;
+    width: 630px;
+    height: 30vh;
+    -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-color: black;
+  border-left: 7px solid black;
+  border-top: 1px solid black;
+}
+
+
+
+@-webkit-keyframes appear {
+    15% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes appear {
+    15% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-o-keyframes appear {
+    15% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    15% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 685px) {
+    .solid{
+      width: 480px;
+      margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  .solid{
+    width: 350px;
+    
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .solid{
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,12 @@
+body {
+    font-family: 'Nova Round', cursive;
+    background-color: blanchedalmond;
+  }
+
+h1 {
+    font-family: CandyFul, sans-serif;
+    font-size: 4rem;
+    color: aliceblue;
+    text-shadow: 4px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  }
+

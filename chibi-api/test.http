@@ -1,0 +1,301 @@
+
+@host=http://localhost:8080
+
+### GET PRODUCT
+
+GET {{host}}/products
+
+### GET CATEGORY
+GET {{host}}/category
+
+
+### SIGNUP
+
+POST {{host}}/SignUp
+Content-Type: application/json
+
+{
+    "mail": "abc@fde.fr",
+    "password": "Chibi1234",
+    "passwordConfirm": "Chibi1234",
+    "first_name": "ALbert",
+    "last_name": "Marc",
+    "gender": true,
+    "birthday_date": "15/03/1986",
+    "phone_number": "0678412570",
+    "street_number": "2 bis",
+    "name_of_the_road": "Rue des lilas",
+    "postal_code": "06450",
+    "city": "Paris"
+}   
+
+### LOGIN
+
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "mail": "abc@fde.fr",
+    "password": "Chibi1234"
+}
+
+### FIND USER
+
+GET {{host}}/account/2
+
+
+### UPDATE USER
+
+PATCH {{host}}/account/2
+Content-Type: application/json
+
+{
+    "mail": "abc@fae.fr",
+    "first_name": "Patrick",
+    "last_name": "Marc",
+    "gender": true,
+    "birthday_date": "15/03/1990",
+    "phone_number": "0678412578",
+    "street_number": "14",
+    "name_of_the_road": "Rue des abres",
+    "postal_code": "06450",
+    "city": "Bordeaux"
+} 
+
+### CREATE ORDER
+
+POST {{host}}/order
+Content-Type: application/json
+
+{
+    "state":{
+        "delivery": {
+            "deliveryAddress":{
+                "isNewAddress": true,
+                "first_name": "aba",
+                "last_name": "obo",
+                "phone_number": "0214521478",
+                "street_number": "5",
+                "name_of_the_road": "rue de bagnolet",
+                "postal_code": "75020",
+                "city": "paris"
+            },
+            "isNewAddress": false
+        },
+
+        "auth":{
+            "isLogged": true,
+            "user": {
+                "id": 1,
+                "street_number": "12",
+                "name_of_the_road": "rue de la libération",
+                "postal_code": "06020",
+                "city": "Caen",
+                "mail": "chibi.test3@gmail.com"
+            }
+        },    
+        "shop":{
+            "cart":[
+                {
+                    "id":21,
+                    "quantity":4
+                },
+                {
+                    "id":26,
+                    "quantity":2
+                },
+                {
+                    "id":19,
+                    "quantity":1
+                }
+            ]
+        }
+    }
+    
+}
+
+### UPDATE PASSWORD
+
+PATCH {{host}}/newPassword
+Content-Type: application/json
+
+{
+    "mail": "abc@fde.fr",
+    "actualPassword": "Chibi1234",
+    "newPassword1": "Chibi134",
+    "newPassword2": "Chibi124"
+}
+
+
+### FIND ORDER BY USER
+
+GET {{host}}/accountOrder/2
+
+
+### DELETE USER
+
+DELETE {{host}}/account/1
+
+### CALCUL CART PRICE
+
+POST {{host}}/checkPrice
+Content-Type: application/json
+
+{
+    "delivery": {
+        "isNewAddress": true,
+        "street_number": "5",
+        "name_of_the_road": "rue de bagnolet",
+        "postal_code": "75020",
+        "city": "paris"
+    },
+
+    "auth":{
+        "isLogged": true,
+        "user": {
+            "user_id": 3,
+            "street_number": "12",
+            "name_of_the_road": "rue de la libération",
+            "postal_code": "06020",
+            "city": "Caen"
+        }
+    },
+    "shop":{
+        "cart":[
+            {
+                "id":21,
+                "quantity":4
+            },
+            {
+                "id":26,
+                "quantity":2
+            },
+            {
+                "id":19,
+                "quantity":5
+            },
+            {
+                "id":11,
+                "quantity":5
+            },
+            {
+                "id":23,
+                "quantity":5
+            },
+            {
+                "id":26,
+                "quantity":5
+            }
+        ]
+    }
+    
+}
+
+### TEST STRIPE
+
+POST {{host}}/createCheckoutSession
+Content-Type: application/json
+
+{
+    "delivery": {
+        "isNewAddress": true,
+        "street_number": "5",
+        "name_of_the_road": "rue de bagnolet",
+        "postal_code": "75020",
+        "city": "paris"
+    },
+
+    "auth":{
+        "isLogged": true,
+        "user": {
+            "user_id": 3,
+            "street_number": "12",
+            "name_of_the_road": "rue de la libération",
+            "postal_code": "06020",
+            "city": "Caen"
+        }
+    },
+    "shop":{
+        "cart":[
+            {
+                "id":21,
+                "quantity":4
+            },
+            {
+                "id":26,
+                "quantity":2
+            },
+            {
+                "id":19,
+                "quantity":1
+            }
+        ]
+    }
+}
+
+
+### VOIR LA WISHLIST
+
+GET {{host}}/wishList/1
+
+
+### INSERER UN OBJET DANS LA WISHLIST
+
+POST {{host}}/useWishList/1
+Content-Type: application/json 
+
+{
+    "id":11
+}
+
+
+### SURPIMER UN PRODUIT DE LA WISHLIST
+
+DELETE {{host}}/useWishList/1
+Content-Type: application/json
+
+{
+    "id": 23
+}
+
+### SURPIMER LES PRODUIT PRODUIT DE LA WISHLIST
+
+DELETE {{host}}/wishList/3
+
+
+### AVOIR LES ADRESSES SECONDAIRES D'UN USER
+
+GET {{host}}/address/1
+
+### MODIFICATION INFO ADRESSE
+
+PATCH {{host}}/address/16
+Content-Type: application/json
+
+{
+    "street_number": "2",
+    "name_of_the_road": "rue des palmiers",
+    "postal_code": "75018",
+    "city": "lyon",
+    "user_id": 3
+}
+
+### SUPPRESSION D'UNE ADRESS
+
+DELETE {{host}}/address/15
+
+### AJOUTER UNE ADRESSE
+
+POST {{host}}/newAddress
+Content-Type: application/json
+
+{
+    "first_name": "marc",
+    "last_name": "theo",
+    "phone_number": "0143080716",
+    "street_number": "123",
+    "name_of_the_road": "rue des pommes",
+    "postal_code": "75019",
+    "city": "Paris",
+    "user_id": 1
+}

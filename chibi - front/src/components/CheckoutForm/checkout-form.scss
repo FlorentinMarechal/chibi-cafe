@@ -1,0 +1,81 @@
+.checkout {
+    max-width: 50%;
+    margin: 2rem auto;
+
+
+    &__form-group {
+        margin: 2rem 0;
+        padding: 0;
+        border-style: none;
+        background-color: #7795f8;
+        will-change: opacity, transform;
+        box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff;
+        border-radius: 4px;
+    }
+
+    &__form-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: 15px;
+        border-top: 1px solid #819efc;
+    }
+
+    &__button {
+        display: block;
+        font-size: 16px;
+        height: 40px;
+        background-color: #f6a4eb;
+        box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 100ms ease-in-out;
+        will-change: transform, background-color, box-shadow;
+        border: none;
+
+        &:active {
+            background-color: #d782d9;
+            box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
+            transform: scale(0.99);
+        }
+    }
+}
+
+.text-animation {
+    white-space: nowrap;
+    overflow: hidden;    
+    animation: animated-text 4s linear 1s 1 normal both;
+}
+
+.image-animation {
+    animation: jump 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+.StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+
+.StripeElement {
+	width: 100%;
+	padding: 11px 15px 11px 0;
+}
+
+
+  

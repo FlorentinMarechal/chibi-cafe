@@ -1,0 +1,8 @@
+@use '../../styles/vars';
+
+.basic-input-radio {
+    padding: vars.$halfGutter;
+    border-radius: vars.$border-radius;
+    border: vars.$border; 
+    margin-right: 0.5rem;
+}

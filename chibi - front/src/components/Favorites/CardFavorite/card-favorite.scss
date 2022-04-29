@@ -1,0 +1,115 @@
+@use '../../../styles/vars';
+
+.card-favorite {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid vars.$tertiary-color;
+    box-shadow: vars.$box-shadow;
+
+    &__name {
+        padding-bottom: vars.$gutter;
+    }
+
+    &__img {
+        padding-bottom: vars.$gutter;
+        width: 110px;
+        height: 130px;
+    }
+    
+    &__button {
+        background-color: rgb(226, 85, 132);
+        border-radius: 20px;
+        color: vars.$tertiary-color;
+        font-weight: bold;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .card-favorite{
+        width: 30%;
+    }
+}
+
+
+@media only screen and (max-height: 850px) {
+   .card-favorite{
+       padding: 0.5rem;
+       
+    &__img{
+        width: 90px;
+        height: 110px;
+    }
+   }
+}
+
+
+@media only screen and (max-height: 750px) {
+    .card-favorite{
+
+
+        &__name{
+            font-size: 0.9rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        
+     &__img{
+         padding-bottom: 0.5rem;
+         width: 100px;
+     }
+    }
+ }
+
+ @media only screen and (max-width: 850px) {
+    .card-favorite{
+        width: 31%;
+
+        &__name{
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .card-favorite{
+
+        &__button{
+            font-size: 0.7rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .card-favorite{
+        flex-basis: 30%;
+
+        &__img{
+            width: 75px;
+            height: 90px;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .card-favorite{
+
+        &__img{
+            width: 65px;
+            height: 80px;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .card-favorite{
+        flex-basis: 45%;
+
+    }
+}

@@ -1,0 +1,127 @@
+@use '../../../styles/vars';
+
+.adresse {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    padding: 2rem;
+
+    &__p {
+        margin-bottom: 20px;
+        color: black;
+        text-align: center;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.img{
+    display: block;
+    width: 60%;
+    margin: auto;
+    max-width: 500px;
+}
+
+.adresse__title {
+    color: rgb(201, 55, 103);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .img{
+        width: 95%;
+        margin-bottom: 5px;
+    }
+
+    .adresse__infos>h3{
+        font-size: 1rem;
+    }
+
+    .adresse__p{
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .adresse{
+        order:2;
+
+        &__img{
+            order: 1;
+        }
+
+        &__p{
+            text-align: left;
+            font-size: 0.6rem;
+        }
+    }
+
+    .adresse__infos>h3{
+        text-align: left;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .adresse{
+        font-size: 0.5rem;
+    }
+
+    .adresse__infos>h3{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-height: 850px) {
+
+    .adresse__infos>h3{
+        font-size: 1rem;
+    }
+
+    .adresse__img{
+        margin-top: 0;
+        width: 85%;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .adresse__img{
+        margin-top: 1rem;
+        width: 60%;
+    }
+
+    .adresse__infos>h3{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .adresse__p{
+        text-align: center;
+    }
+
+}
+
+
+
+@media only screen and (max-height: 750px) {
+
+  .adresse{
+      padding: 1rem;
+  }
+
+}
+
+
+
+

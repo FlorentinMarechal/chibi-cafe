@@ -1,0 +1,8 @@
+@use '../../styles/vars';
+
+.confirmation {
+    width: 60rem;
+    margin: auto;
+    border-radius: vars.$border-radius;
+    padding: 4rem;
+}

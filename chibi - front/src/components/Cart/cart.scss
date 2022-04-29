@@ -1,0 +1,302 @@
+@use '../../styles/vars';
+
+
+
+.cart-container{
+    padding: 5rem;
+    width: 100%;
+    min-height: 70vh;
+}
+.cart{
+    width: 90%;
+}
+.cart__header{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cart__content {
+    display: block;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem auto;
+    max-width: 2000px;
+}
+
+
+.cart__body{
+    display: flex;
+    border: 2px solid rgb(223, 217, 219);
+    flex-direction: column;
+    width: 70%;
+    padding: 2%;
+    box-shadow: vars.$box-shadow;
+    background: vars.$tertiary-color;
+    margin: auto;
+    border-radius: 0.5rem;
+
+    &__legend{
+        display: flex;
+       width: 100%;
+
+    }
+
+    &__none{
+        margin: 3rem auto;
+        text-align: center;
+    }
+
+}
+.cart__body__legend{
+    width: 100%;
+    padding: 2%;
+}
+.cart__body__legend div{
+    width: 23.5%;
+    font-size: 0.8rem;
+}
+.card__content{
+    margin-top: 1.5rem;
+    display: flex;
+    width:94%;
+    border-radius: 5px;
+    align-items: center;
+    color:rgb(226, 85, 132);
+
+    &__quantity{
+        display: flex;
+        &__count{
+            color: black;
+            text-align: center;
+        }
+    }
+}
+.card__underPrice h6{
+    white-space: nowrap;
+}
+.card{
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(226, 85, 132);
+    width: 100%;
+    align-items: center; 
+    padding: 2%;
+
+    &:last-child{
+        border: none;
+    }
+}
+.card__suppr{
+    width: 6%;
+}
+
+.card__suppr button, .card__content__quantity input{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.card__suppr i{
+    color:rgb(226, 85, 132);
+  
+}
+.card__content div{
+    width: 50%;
+}
+.cart__ender{
+    position: sticky;
+    top: 20px;
+    border: 2px solid rgb(223, 217, 219);
+    display: flex;
+    width: 30%;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+    margin-left: 3rem;
+    box-shadow: vars.$box-shadow;
+    background: vars.$tertiary-color;
+    border-radius: 0.5rem;
+    height: 20%;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .card__content{
+        width: 97%;
+    }
+
+    .cart__body{
+        width: 80%;
+    }
+    .cart__ender{
+        margin-left: 0.5rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .container{
+        padding:5rem 0rem ;
+    }
+.cart{
+    width: 100%;
+}
+.cart__content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+   
+}
+
+.cart__body{
+    width: 95%;
+}
+
+.cart__ender{
+    margin-left: 0;
+    margin-top: 2%;
+    width: 50%;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .cart{
+        position: relative;
+        width: 100%;
+        
+
+
+        &__body{
+            width: 100%;
+        }
+
+        
+    }
+    .cart__header{
+        font-size: 1.1rem;
+    }
+    .cart__ender{
+        width: 95%;
+        height: 10%;
+        flex-direction: row;
+        position: sticky;
+        bottom: 60px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        
+        &__header{
+            display: none;
+        }
+
+        &__footer{
+            width: 75%;
+            padding: 0.5rem
+        }
+
+    }
+
+    .cart__body__legend div{
+        font-size: 0.7rem;
+    }
+    
+    .card__content{
+        font-size: 0.8rem;
+    }
+
+    .card__content__quantity__count{
+        margin: 0 1rem;
+    }
+    
+    .cart__ender__header{
+        font-size: 0.8rem;
+    }
+
+    .cart__ender__footer{
+        padding: 1rem;
+    }
+  
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .cart__content{
+        width: 100%;
+    }
+
+    .card{
+        margin-bottom: 0.5rem;
+    }
+
+    .card__content__des{
+        flex-basis: 60%;
+        text-align: center;
+        order: 1;
+    }
+
+    .cart__body__legend,.card__content__priceUnit{
+display: none;
+    }
+
+    .card__content__quantity{
+        order: 3;
+        margin-left: 2.5rem;
+    }
+
+    .card__content{
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.7rem;
+
+    }
+
+    .card__underPrice{
+        order: 2;
+    }
+
+    .cart__ender{
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .cart__ender__footer{
+        width: 60%;
+    }
+}
+
+
+
+
+@media only screen and (max-height: 850px) {
+    .cart{
+        margin: 1rem auto 2rem;
+    }
+
+    .cart-container{
+        padding: 0.5rem;
+
+    }
+
+    .cart__ender{
+        gap: 1rem;
+
+        &__footer{
+            padding: 0;
+        }
+    }
+}

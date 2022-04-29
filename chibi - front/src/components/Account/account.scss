@@ -1,0 +1,164 @@
+@use '../../styles/vars';
+
+
+.auth {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    height: 80vh;
+
+    padding: 2rem;
+    padding-bottom: 4rem;
+
+    &-container-signup {
+        width: 40%;
+    }
+
+    &-container-login{
+        width: 40%;
+    }
+
+    
+}
+
+.input{
+    height: 25px;
+    border-radius: 8px;
+}
+
+.isClient{
+    display: none;
+
+    &--close{
+        display: none;
+    }
+}
+
+// .center{
+//     font-size: 1rem;
+// }
+
+.clientBtn{
+    margin-top: 1rem;
+    padding: 1.20rem;
+    border-radius: 0.75rem;
+    border: none;
+    background-color: #85dcec;
+}
+
+@media only screen and (max-width: 1350px) {
+    .auth-container-signup{  
+        width: 45%;
+    
+}
+
+    .auth-container-login{
+        width: 45%;
+
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .auth-container-login{
+        width: 55%;
+    }
+
+    .auth-container-signup{
+        width: 55%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .auth-container-signup{
+        display: none;
+
+        &--open{
+            display: block;
+        }
+    }
+
+
+
+    .isClient{
+        width: 80%;
+        box-shadow: vars.$box-shadow;
+        background: vars.$tertiary-color;
+        margin: auto;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-radius: vars.$border-radius;
+
+        &--close{
+            display: none;
+        }
+    }
+
+    .auth-container-login{
+        width: 70%;
+
+        &--close{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .auth-container-login{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .auth-container-login{
+        width: 100%;
+    }
+
+    .isClient{
+        width: 90%;
+
+       
+    }
+}
+
+
+@media only screen and (max-height: 850px) {
+ .basic-input{
+     padding: 0.5rem;
+ }
+
+ .form__auth{
+    gap: 0.25rem;
+ }
+}
+
+@media only screen and (max-height: 800px) {
+    .auth{
+        height: 75vh;
+    }
+   }
+
+@media only screen and (max-height: 750px) {
+    .basic-input{
+        padding: 0.35rem;
+    }
+
+   }
+
+
+   @media only screen and (max-height: 700px) {
+   .auth{
+       height: 70vh;
+   }
+
+   .basic-input{
+    padding: 0.3rem;
+}
+
+   }

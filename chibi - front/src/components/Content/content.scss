@@ -1,0 +1,25 @@
+@use '../../styles/vars';
+
+.content {
+    padding: vars.$gutter;
+    flex: 1;
+
+    &__title {
+        font-size: 2em;
+        font-weight: bold;
+        color: vars.$primary-color;
+        margin-bottom: vars.$gutter;
+        border-bottom: vars.$border;
+    }
+
+    &__list {
+        display: flex;
+        padding: vars.$halfGutter;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .content__list {
+        flex-direction: column;
+    }
+}

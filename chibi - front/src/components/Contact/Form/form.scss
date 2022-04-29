@@ -1,0 +1,230 @@
+@use '../../../styles/vars';
+
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+.form__contact {
+    display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+
+    &__title {
+        color: vars.$fourth-color;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0.6rem;
+        width: 100%;
+    }
+
+    &__fields {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+        &__label {
+            color: vars.$fourth-color;
+            font-weight: bold;
+            width: 7rem;
+        }
+        
+    }
+}
+
+.input{
+    width: 100%;
+}
+
+
+.message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 22px;
+    
+    &__label {
+        text-align: center;
+        color: vars.$fourth-color;
+        font-weight: bold;
+    }
+    
+    &__text {
+        width: 100%;
+        height: 200px;
+        margin-top: 5px;
+        background-color: #f8f8f8;
+        outline: none;
+        padding: vars.$halfGutter;
+        border-radius: vars.$border-radius;
+        border: vars.$border; 
+        resize: none;
+        font-size: .8rem;
+        letter-spacing: 1px;
+    }
+}
+
+.form-open{
+    transform: translatey(0);
+    transition: transform 0.5s ease-out;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    display: block;
+    position: absolute;
+    z-index: 20;
+    bottom: 60px;
+    box-shadow: vars.$box-shadow;
+    background: vars.$tertiary-color;
+}
+
+@media only screen and (max-width: 1050px) {
+    .form__contact> h2{
+        font-size: 1.1rem;
+    }
+
+    .message__label{
+        font-size: 1.1rem;
+    }
+
+    .message__text{
+        height: 150px;
+    }
+
+    .input{
+        height: 20px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    .form{
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .basic-input{
+            padding: 0.4rem;
+        }
+    }
+
+    .message{
+        width: 50%;
+    height: 180px;
+    margin-left: 5px;
+
+    &__label{
+        font-size: 0.8rem;
+    }
+
+    }
+
+    .form__contact> h2{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+@media only screen and (max-height: 850px) {
+    .input{
+        height: 20px;
+    }
+
+    .message__text{
+        height: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .form{
+        flex-direction: column;
+        padding: 0.5rem;
+        width: 100%;
+
+    }
+
+        .form__contact{
+            gap: 0.2rem;
+            font-size: 0.5rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+                
+            
+          
+                &__fields{
+                    width: 48%;
+                
+            }
+
+            &__title{
+                width: 100%;
+            }
+
+        }
+    
+    .message__text{
+        height: 50px;
+    }
+
+    .message{
+        width: 100%;
+        height: 150px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .form__contact> h2{
+        font-size: 0.7rem;
+    }
+
+    .message__label{
+        font-size: 0.7rem;
+    }
+
+    .message__text{
+        height: 100px;
+    }
+
+    .form{
+        transform: translatey(150%);
+        transform: translateX(-100%);
+    z-index: 20;
+    position: absolute;
+    bottom: 60px;    
+    }
+}
+
+
+@media only screen and (max-height: 750px) {
+
+   .basic-input{
+       height: 23px;
+   }
+  
+  }
+  

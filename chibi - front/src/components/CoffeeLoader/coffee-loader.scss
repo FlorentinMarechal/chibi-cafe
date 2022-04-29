@@ -1,0 +1,55 @@
+@use '../../styles/vars';
+
+#loader {
+    height: 85vh;
+    width: 100%;
+}
+  
+#loader .cup {
+  height: 140px;
+  width: 180px;
+  border: 6px solid #efb54a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0 0 70px 70px;
+  background-image: url('coffee.png');
+  box-shadow: 0 0 0 6px #fff;
+  background-position: 0 140px;
+  background-repeat: repeat-x;
+  animation: remplir 3s 1 ease-in-out forwards;
+}
+  
+#loader .cup .handle {
+  height: 70px;
+  width: 40px;
+  background-color: transparent;
+  border: 6px solid #fff;
+  position: relative;
+  left: 175px;
+  top: 2px;
+  border-radius: 0 25px 80px 0;
+}
+  
+/* On passe maintenant à l'animation de remplissage */
+@keyframes remplir {
+  0% {
+    background-position: 0 140px;
+  }
+  20% {
+    background-position: -300px 90px;
+  }
+  40% {
+    background-position: -600px 60px;
+  }
+  60% {
+    background-position: -900px 20px;
+  }
+  80% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: -1500px -40px;
+  }
+}

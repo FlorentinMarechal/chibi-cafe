@@ -1,0 +1,11 @@
+%syntax-version=1.0.0
+%project=chibi-api
+
+init 2021-09-20T15:17:19Z Florentin <marechalflorentin@gmail.com> # Initialisation de la base
+constraint 2021-09-21T11:52:47Z leo <leopold.deconinck@gmail.com> # Ajout des contraintes SQL
+add_constraints 2021-09-21T12:37:28Z leo <leopold.deconinck@gmail.com> # Ajout des contraintes aux champs
+seeding_product 2021-09-21T12:57:52Z leo <leopold.deconinck@gmail.com> # Integration de données pour les produits
+wishlist 2021-09-30T08:39:04Z Florentin <marechalflorentin@gmail.com> # Ajout de la wishlist en base
+address 2021-09-30T13:43:47Z Florentin <marechalflorentin@gmail.com> # Add table address
+addAdressConstraint 2021-10-01T13:07:26Z leo <leopold.deconinck@gmail.com> # Ajout des contraintes aus adresses
+Wishlist_view 2021-10-04T11:15:45Z Florentin <marechalflorentin@gmail.com> # Ajout view wishlist pour utilisation du front

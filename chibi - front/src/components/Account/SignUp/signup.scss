@@ -1,0 +1,56 @@
+.gender {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.names {
+    display: flex;
+    gap: 0.5rem;
+
+    &>div {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .names {
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}
+
+.address {
+    display: flex;
+
+    & input:first-child {
+        width: 27%;
+        margin-right: 0.5rem;
+    }
+
+    & input:last-child {
+        flex: 1;
+    }
+}
+
+.city {
+    display: flex;
+
+    & input:first-child {
+        width: 27%;
+        margin-right: 0.5rem;
+    }
+
+    & input:last-child {
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .radioIn>.input{
+        width: 10px;
+    }
+
+    .signup-title{
+        font-size: 1.2rem;
+    }
+}

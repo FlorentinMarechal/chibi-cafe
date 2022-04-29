@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+$gutter: 1.5rem;
+$halfGutter: math.div($gutter, 2);
+$border-radius: math.div($gutter, 2);
+$primary-color: #fff0d5;
+$secondary-color: #e7ccd8;
+$tertiary-color: #f3f3f3;
+$fourth-color: rgb(226, 85, 132);
+$primary-linear: linear-gradient(-225deg, $primary-color 0%, $secondary-color 100%);
+$box-shadow: -5px 6px 10px 2px rgba(0,0,0,0.17);
+$border: 1px solid #c9c9c9; 
+$small: 700px;

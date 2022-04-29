@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body style="
+    text-align: center;
+    font-family: 'Nova Round', cursive;
+    background-color: rgb(255, 234, 243);
+    font-size: 1.5rem">
+    
+  <h1 style= "
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(149, 157, 163);
+  ">CHIBI CAFE</h1>
+  
+  <p>Cet email tient lieu de confirmation pour votre paiement de {{deliveryInfo.total}}€, effectué le {{mailOrderDate}} sur la boutique Chibi Cafe.</p>
+  <p>La commande sera livré au {{deliveryInfo.street_number}} {{deliveryInfo.name_of_the_road}} {{deliveryInfo.postal_code}} {{deliveryInfo.city}}</p>
+  <p>Merci de votre commande {{deliveryInfo.first_name}}</p>
+</body>
+</html>
